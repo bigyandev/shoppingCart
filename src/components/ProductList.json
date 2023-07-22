@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name": "watch",
+        "image": "../image/watch.jpg",
+        "price": 250,
+        "isAdded": false
+    },
+    {
+        "id":2,
+        "name": "laptop",
+        "image": "../image/laptop.jpg",
+        "price": 1000,
+        "isAdded": false
+    },
+    {
+        "id":3,
+        "name": "mouse",
+        "image": "../image/mouse.jpg",
+        "price": 10,
+        "isAdded": false
+    },
+    {
+        "id":4,
+        "name": "keyboard",
+        "image": "../image/keyboard.jpg",
+        "price": 20,
+        "isAdded": false
+    },
+    {
+        "id":5,
+        "name": "mobile",
+        "image": "image/mobile.jpg",
+        "price": 450,
+        "isAdded": false
+    },
+    {
+        "id":6,
+        "name": "monitor",
+        "image": "./image/monitor.jpg",
+        "price": 230,
+        "isAdded": false
+    }
+]
