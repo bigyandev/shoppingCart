@@ -1,7 +1,7 @@
 import React from "react";
 const TotalPrice = () => {
   const style = {
-    width: "45%",
+    width: "20%",
     height: "40%",
     border: "3px solid black"
   }
