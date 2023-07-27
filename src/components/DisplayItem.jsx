@@ -19,12 +19,15 @@ export const DisplayItem = (props) => {
      
         <div className="container">
         {datas && datas.map((data) => {
+            const isAddedToCart = cartProducts.some((product) => product.id === data.id)
+            console.log(isAddedToCart);
+            console.log(cartProducts);
            return <div className="card" key={data.id}>
                <img src={data.image}  alt={data.name}/>
                <div className="datalist">
                 <h2>{data.name}</h2>
                 <h3>${data.price}</h3>
-                <button onClick={() => addToCart(data)}>{btnClicked ? "ADDED" : "ADD TO CART"}</button>
+                <button disabled={isAddedToCart} onClick={() => addToCart(data)}>{isAddedToCart ? "ADDED" : "ADD TO CART"}</button>
                 
                 </div>
                 

@@ -7,7 +7,7 @@ import {  NavLink, Route, Routes } from 'react-router-dom';
 import CartPage from './components/CartPage';
 import ProductContext from "./components/PrdouctContext.jsx"
 import { DataProvider } from './components/PrdouctContext.jsx';
-import { CartContext, CartProvider } from './context/CartContext';
+import {  CartProvider } from './context/CartContext';
 
 
 function App() {
@@ -23,15 +23,17 @@ function App() {
     <NavLink className="link" to="/Cart">CART</NavLink>
     </li>
    </nav>
-   <CartProvider>
+   
    <DataProvider>
+   <CartProvider>
    <Routes>
     <Route path="/" element={<HomePage />} />
     
     <Route path="/Cart" element={<CartPage />} />
    </Routes>
-   </DataProvider>
    </CartProvider>
+   </DataProvider>
+   
   
   
    
