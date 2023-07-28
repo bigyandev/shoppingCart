@@ -13,7 +13,6 @@ export const DisplayItem = (props) => {
     const {btnClicked} = useContext(CartContext)
     
     
-    
     return (
         <>
      
