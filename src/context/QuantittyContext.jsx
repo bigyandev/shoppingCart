@@ -3,11 +3,11 @@ import React, { useContext, createContext, useState } from "react"
 export const QtyContext = createContext(null)
 
 export const QtyProvider = ({children}) => {
-    const [productQty, setproductQty] = useState({});
-
+    const [productQty, setproductQty] = useState({})
      const incrementQty = (itemId) => {
        setproductQty((prevQty) => {
         const newQty = (prevQty[itemId] || 0) + 1;
+       
         return {
             ...prevQty,
             [itemId]: newQty
