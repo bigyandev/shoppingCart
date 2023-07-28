@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { useCart } from "../context/CartContext";
 import Card from "./Card";
 
@@ -50,12 +50,10 @@ const SelectedItem = () => {
        setCartProducts(newProduct);
     }
 
-    const {incrementQty} = useQty()
-    const {decrementQty} = useQty();
-    const {productQty} = useQty();
+    
+
  return (
     
-    <>
     <div style={style}>
       <div style={style_item}>
         {cartProducts &&
