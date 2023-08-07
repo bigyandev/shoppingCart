@@ -12,7 +12,7 @@ export const DisplayItem = (props) => {
     const {cartProducts} = useContext(CartContext)
     const {btnClicked} = useContext(CartContext)
     
-    
+    console.log(cartProducts)
     return (
         <>
      

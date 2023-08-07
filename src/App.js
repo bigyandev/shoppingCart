@@ -8,29 +8,25 @@ import CartPage from './components/CartPage';
 import ProductContext from "./components/PrdouctContext.jsx"
 import { DataProvider } from './components/PrdouctContext.jsx';
 import {  CartProvider } from './context/CartContext';
+import NavBar from "./components/NavBar"
 
 
 function App() {
   
   return (
    <>
-      
-   <nav>
-    <li>
-      <NavLink className="link" to="/" >HOME</NavLink>
-    </li>
-    <li>
-    <NavLink className="link" to="/Cart">CART</NavLink>
-    </li>
-   </nav>
+     
+   
    
    <DataProvider>
    <CartProvider>
+    <NavBar />
    <Routes>
     <Route path="/" element={<HomePage />} />
-    
     <Route path="/Cart" element={<CartPage />} />
+    
    </Routes>
+   
    </CartProvider>
    </DataProvider>
    

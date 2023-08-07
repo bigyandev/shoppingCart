@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React from "react";
 import { useCart } from "../context/CartContext";
 import Card from "./Card";
 
@@ -40,26 +40,25 @@ const SelectedItem = () => {
         color: "white",
         marginBottom: "10px"
     }
-    
-    const {cartProducts} = useCart()
-    const data = useContext(ProductContext)
-    const {setCartProducts} = useCart();
-
-    const handleRemove = (deleteproduct) => {
-       const newProduct = cartProducts.filter((product) => product.id !== deleteproduct.id)
-       setCartProducts(newProduct);
-    }
+   
+    const {cartProducts,removeFromCart} = useCart();
 
     
+
+ 
 
  return (
     
     <div style={style}>
+     
       <div style={style_item}>
         {cartProducts &&
           cartProducts.map((cart) => {
             return (
+                
               <Card handleRemove={() => removeFromCart(cart)} key={cart.id} cart={cart} />
+             
+            
             );
           })}
       </div>

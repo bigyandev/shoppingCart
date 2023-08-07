@@ -24,6 +24,7 @@ const Card = ({ cart, handleRemove }) => {
   const handleAdd = () => {
     setTotalQty((prev) => {
       addToCart(cart, prev + 1);
+    
       return prev + 1;
     });
   };
