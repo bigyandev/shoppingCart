@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useContext, createContext } from "react";
+import { NavLink } from "react-router-dom";
 import { CartContext, useCart } from "../context/CartContext";
 import ProductContext from "./PrdouctContext";
 
@@ -27,7 +28,7 @@ export const DisplayItem = (props) => {
                 <h2>{data.name}</h2>
                 <h3>${data.price}</h3>
                 <button disabled={isAddedToCart} onClick={() => addToCart(data)}>{isAddedToCart ? "ADDED" : "ADD TO CART"}</button>
-                
+                <button><NavLink to={`/Cart/${data.name}`}>Details</NavLink></button>
                 </div>
                 
                 </div>
